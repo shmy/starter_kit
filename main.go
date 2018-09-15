@@ -6,13 +6,14 @@ import (
 	"github.com/kataras/iris/core/errors"
 	"github.com/lexkong/log"
 	"github.com/spf13/viper"
+	"net/http"
 	"starter_kit/config"
 	"starter_kit/routing"
 	"starter_kit/util"
-	"net/http"
 	"time"
 )
-func init () {
+
+func init() {
 	config.Init("")
 }
 func main() {
@@ -32,6 +33,7 @@ func main() {
 		}
 		log.Info("The router has been deployed successfully.")
 	}()
+
 	app.Run(iris.Addr(url))
 
 }
