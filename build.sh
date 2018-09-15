@@ -6,9 +6,9 @@ CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o bin/windows/$SERVER_NAME.exe
 
 
 # 压缩
-upx bin/darwin/$SERVER_NAME
-upx bin/linux/$SERVER_NAME
-upx bin/windows/$SERVER_NAME.exe
+upx -9 bin/darwin/$SERVER_NAME
+upx -9 bin/linux/$SERVER_NAME
+upx -9 bin/windows/$SERVER_NAME.exe
 
 # 配置文件 也许你需要 对生产环境新增一个配置文件 config.prod.yml
 cp config.yml bin/darwin/config.yml
