@@ -21,3 +21,5 @@ import:
   version: ^1.2.0
 - package: github.com/shirou/gopsutil
   version: ^2.18.7
+- package: github.com/StackExchange/wmi
+  version: ^1.0.0

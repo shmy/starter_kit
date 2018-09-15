@@ -8,6 +8,8 @@ import (
 )
 
 func RouteMapping(app *iris.Application) {
+	// 静态服务
+	app.StaticWeb("/static", "./public")
 	svcdGroup := app.Party("/svcd")
 	clientGroup := app.Party("/client")
 	adminGroup := app.Party("/admin")

@@ -1,5 +1,5 @@
-hash: 81a74d39cef2727c857002482b5d3a0dcc2d71b64eec30847a1b8b5a488c0728
-updated: 2018-09-15T13:14:37.228172+08:00
+hash: 16cdb734dec9827bed6339d7a2c1d25cb67b9bea2b9d7491262d7432a281bdaa
+updated: 2018-09-15T13:58:41.045554+08:00
 imports:
 - name: github.com/aymerick/raymond
   version: b565731e1464263de0bda75f2e45d97b54b60110
@@ -19,6 +19,10 @@ imports:
   version: 24195e6d38b06020d7a92c7b11960cf2e7cad2f2
 - name: github.com/fsnotify/fsnotify
   version: ccc981bf80385c528a65fbfdd49bf2d8da22aa23
+- name: github.com/go-ole/go-ole
+  version: 7a0fa49edf48165190530c675167e2f319a05268
+  subpackages:
+  - oleutil
 - name: github.com/hashicorp/go-version
   version: b5a281d3160aa11950a6182bd9a9dc2cb1e02d50
 - name: github.com/hashicorp/hcl
@@ -118,6 +122,12 @@ imports:
   version: abc90934186a77966e2beeac62ed966aac0561d5
 - name: github.com/shirou/gopsutil
   version: 8048a2e9c5773235122027dd585cf821b2af1249
+  subpackages:
+  - cpu
+  - disk
+  - internal/common
+  - load
+  - mem
 - name: github.com/Shopify/goreferrer
   version: b9777dc9f9cc3f3e426a01d218ddd6d52153f907
 - name: github.com/shurcooL/sanitized_anchor_name
@@ -134,6 +144,8 @@ imports:
   version: 298182f68c66c05229eb03ac171abe6e309ee79a
 - name: github.com/spf13/viper
   version: 8fb642006536c8d3760c99d4fa2389f5e2205631
+- name: github.com/StackExchange/wmi
+  version: 5d049714c4a64225c3c79a7cf7d02f7fb5b96338
 - name: golang.org/x/crypto
   version: 0e37d006457bf46f9e6692014ba72ef82c33022c
   repo: https://github.com/golang/crypto
@@ -155,6 +167,7 @@ imports:
   vcs: git
   subpackages:
   - unix
+  - windows
 - name: golang.org/x/text
   version: 905a57155faa8230500121607930ebb9dd8e139c
   repo: https://github.com/golang/text
