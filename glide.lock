@@ -1,5 +1,5 @@
-hash: 16cdb734dec9827bed6339d7a2c1d25cb67b9bea2b9d7491262d7432a281bdaa
-updated: 2018-09-15T13:58:41.045554+08:00
+hash: 0d85eb3d97dec93285ac4415b5df4c6abe43924a80f76248ee5d6f535c7f80e1
+updated: 2018-09-15T17:10:59.564691+08:00
 imports:
 - name: github.com/aymerick/raymond
   version: b565731e1464263de0bda75f2e45d97b54b60110
@@ -23,6 +23,8 @@ imports:
   version: 7a0fa49edf48165190530c675167e2f319a05268
   subpackages:
   - oleutil
+- name: github.com/go-sql-driver/mysql
+  version: d523deb1b23d913de5bdada721a6071e71283618
 - name: github.com/hashicorp/go-version
   version: b5a281d3160aa11950a6182bd9a9dc2cb1e02d50
 - name: github.com/hashicorp/hcl
@@ -43,6 +45,8 @@ imports:
   version: 36e9d2ebbde5e3f13ab2e25625fd453271d6522e
 - name: github.com/jinzhu/gorm
   version: 6ed508ec6a4ecb3531899a69cbc746ccf65a4166
+- name: github.com/jinzhu/inflection
+  version: 04140366298a54a039076d798123ffa108fff46c
 - name: github.com/Joker/jade
   version: 8828253bfc54f2f91aaef5f32b44a244b0a98e4f
 - name: github.com/json-iterator/go
@@ -175,6 +179,10 @@ imports:
   subpackages:
   - transform
   - unicode/norm
+- name: google.golang.org/appengine
+  version: 03cac3b07182cfb08c0d0c0b6ee72a1ceb151c92
+  repo: https://github.com/golang/appengine
+  vcs: git
 - name: gopkg.in/russross/blackfriday.v2
   version: cadec560ec52d93835bf2f15bd794700d3a2473b
 - name: gopkg.in/yaml.v2

@@ -12,6 +12,9 @@ import:
 - package: golang.org/x/sys
   repo: https://github.com/golang/sys
   vcs: git
+- package: google.golang.org/appengine
+  repo: https://github.com/golang/appengine
+  vcs: git
 - package: github.com/kataras/iris
   version: ^10.7.0
 - package: github.com/jinzhu/gorm
@@ -23,3 +26,5 @@ import:
   version: ^2.18.7
 - package: github.com/StackExchange/wmi
   version: ^1.0.0
+- package: github.com/go-sql-driver/mysql
+  version: ^1.4.0

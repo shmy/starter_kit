@@ -8,13 +8,17 @@ import (
 	"github.com/spf13/viper"
 	"net/http"
 	"starter_kit/config"
+	"starter_kit/model"
 	"starter_kit/routing"
 	"starter_kit/util"
 	"time"
 )
 
 func init() {
+	// 初始化配置工具和日志
 	config.Init("")
+	// 初始化数据库
+	model.Init()
 }
 func main() {
 	app := iris.Default()
