@@ -13,7 +13,7 @@ func Update(ctx util.ApiContext) error {
 	if err != nil {
 		return ctx.Fail(errors.New("id格式不正确"))
 	}
-	body := Todo{}
+	body := todo2.Todo{}
 	err = ctx.ReadJSON(&body)
 	if err != nil {
 		return ctx.Fail(err)
@@ -26,7 +26,10 @@ func Update(ctx util.ApiContext) error {
 		}
 		return ctx.Fail(err)
 	}
-	err = model.GetDB().Model(&todo).Updates(body).Error
+	err = model.GetDB().Model(&todo).Updates(map[string]string{
+		"title":   body.Title,
+		"content": body.Content,
+	}).Error
 	if err != nil {
 		return ctx.Fail(err)
 	}
