@@ -16,9 +16,9 @@ cp config.yml bin/linux/config.yml
 cp config.yml bin/windows/config.yml
 
 # 静态资源
-cp -R public bin/darwin/public
-cp -R public bin/linux/public
-cp -R public bin/windows/public
+cp -R public bin/darwin/
+cp -R public bin/linux/
+cp -R public bin/windows/
 
 # unix管理文件
 cp manage.sh bin/darwin/manage.sh
