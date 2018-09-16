@@ -6,7 +6,7 @@ type Paging struct {
 	Offset int // 计算出的偏移值
 }
 
-// 解析 分页参数
+// 方便从URLParam中 解析分页参数
 func ParsePaging(ctx *ApiContext) Paging {
 	page := ctx.URLParamIntDefault("page", 1)
 	limit := ctx.URLParamIntDefault("per_page", 20)

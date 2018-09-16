@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS `db_todos`;
+CREATE DATABASE `db_todos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_croatian_ci;
+USE `db_todos`;
+
+CREATE TABLE `t_todos` (
+  `id` INT UNSIGNED AUTO_INCREMENT,
+  `title` VARCHAR(32) NOT NULL,
+  `content` TEXT NOT NULL,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME DEFAULT NULL,
+  `deleted_at` DATETIME DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=INNOID;

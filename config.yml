@@ -7,14 +7,14 @@ db:                       # 数据库
   port: 3306
   user: root
   password: example
-  database: police
+  database: db_todos
 
 jsonwebtoken:
   client:
     secret: "client"              # 密钥
     overdue: 86400                # 过期时间 秒
   admin:
-    secret: "admin"               # 密钥
+    secret: "todo"               # 密钥
     overdue: 86400                # 过期时间 秒
 log:
   writers: file,stdout

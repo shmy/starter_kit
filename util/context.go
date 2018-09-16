@@ -9,14 +9,14 @@ type ApiContext struct {
 	iris.Context
 }
 
-type Handler func(ctx ApiContext) error
+type ApiHandler func(ctx ApiContext) error
 
 // 成功的返回
 func (c *ApiContext) Success(payload interface{}) error {
 	_, err := c.JSON(iris.Map{
-		"c": 0,
-		"m": "ok",
-		"d": payload,
+		"code": 0,
+		"msg":  "ok",
+		"data": payload,
 	}, context.JSON{
 		StreamingJSON: true,
 		UnescapeHTML:  true,
@@ -25,11 +25,15 @@ func (c *ApiContext) Success(payload interface{}) error {
 }
 
 // 失败的返回
-func (c *ApiContext) Fail(error error, code int) error {
+func (c *ApiContext) Fail(error error, statusCode ...int) error {
+	code := 1
+	if len(statusCode) > 0 {
+		code = statusCode[0]
+	}
 	_, err := c.JSON(iris.Map{
-		"c": code,
-		"m": error.Error(),
-		"d": nil,
+		"code": code,
+		"msg":  error.Error(),
+		"data": nil,
 	}, context.JSON{
 		StreamingJSON: true,
 		UnescapeHTML:  true,
@@ -37,7 +41,8 @@ func (c *ApiContext) Fail(error error, code int) error {
 	return err
 }
 
-func ApiHandlerWrap(handler Handler) iris.Handler {
+// 包装 iris.Handler 使其返回error 方便结束请求
+func ApiHandlerWrap(handler ApiHandler) iris.Handler {
 	return func(c iris.Context) {
 		ctx := ApiContext{c}
 		handler(ctx)
